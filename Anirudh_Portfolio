@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anirudh Ramesh Kumar Praseeda - Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Libre Baskerville', serif;
+            background-color: #f4f1ea;
+            color: #222;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+        }
+        .sidebar {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 180px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 12px;
+            margin: 8px 0;
+            text-decoration: none;
+            font-size: 16px;
+            color: #333;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .sidebar a:hover {
+            background: #ddd;
+            transform: scale(1.05);
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .header {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: black;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 0.5s;
+        }
+        .subheader {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: #555;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 1s;
+        }
+        .section {
+            margin: 40px 0;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 1.5s;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        iframe {
+            width: 100%;
+            max-width: 500px;
+            height: 280px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            transform: scale(0.9);
+            transition: transform 0.3s ease-in-out;
+        }
+        iframe:hover {
+            transform: scale(1);
+        }
+        .decorative-line {
+            width: 50px;
+            height: 3px;
+            background-color: black;
+            margin: 10px auto;
+            animation: grow 1.5s ease-in-out forwards;
+        }
+        @keyframes grow {
+            from { width: 0; }
+            to { width: 50px; }
+        }
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+        }
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Anirudh Ramesh Kumar Praseeda</div>
+        <div class="subheader">Robotics Engineer / Poet</div>
+
+        <div class="section" id="engineering">
+            <h2>Robotics & Engineering Projects</h2>
+            <div class="decorative-line"></div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="section" id="writing">
+            <h2>Poetry & Writing</h2>
+            <div class="decorative-line"></div>
+            <p>Exploring the art of words and emotions through poetry and storytelling.</p>
+        </div>
+    </div>
+    <div class="sidebar">
+        <a href="#about">About Me</a>
+        <a href="#engineering">Robotics & Engineering Projects</a>
+        <a href="#writing">Writings & Poems</a>
+        <a href="#motivations">Motivations</a>
+    </div>
+</body>
+</html>
